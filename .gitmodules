@@ -1,0 +1,24 @@
+[submodule "error"]
+	path = error
+	url = https://github.com/straightway/error
+[submodule "expr"]
+	path = expr
+	url = https://github.com/straightway/expr
+[submodule "numbers"]
+	path = numbers
+	url = https://github.com/straightway/numbers
+[submodule "peerspace"]
+	path = peerspace
+	url = https://github.com/straightway/peerspace
+[submodule "repo"]
+	path = repo
+	url = https://github.com/straightway/repo
+[submodule "sim"]
+	path = sim
+	url = https://github.com/straightway/sim
+[submodule "testing"]
+	path = testing
+	url = https://github.com/straightway/testing
+[submodule "units"]
+	path = units
+	url = https://github.com/straightway/units

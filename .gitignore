@@ -22,16 +22,6 @@
 **/out
 .gradle
 
-# Sub projects
-error/
-expr/
-numbers/
-peerspace/
-repo/
-sim/
-testing/
-units/
-
 # Mongo Explorer plugin:
 .idea/**/mongoSettings.xml
 
