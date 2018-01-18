@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/error/error.iml" filepath="$PROJECT_DIR$/.idea/modules/error/error.iml" group="error" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/error/error_main.iml" filepath="$PROJECT_DIR$/.idea/modules/error/error_main.iml" group="error" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/error/error_test.iml" filepath="$PROJECT_DIR$/.idea/modules/error/error_test.iml" group="error" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/expr/expr.iml" filepath="$PROJECT_DIR$/.idea/modules/expr/expr.iml" group="expr" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/expr/expr_main.iml" filepath="$PROJECT_DIR$/.idea/modules/expr/expr_main.iml" group="expr" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/expr/expr_test.iml" filepath="$PROJECT_DIR$/.idea/modules/expr/expr_test.iml" group="expr" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/numbers/numbers.iml" filepath="$PROJECT_DIR$/.idea/modules/numbers/numbers.iml" group="numbers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/numbers/numbers_main.iml" filepath="$PROJECT_DIR$/.idea/modules/numbers/numbers_main.iml" group="numbers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/numbers/numbers_test.iml" filepath="$PROJECT_DIR$/.idea/modules/numbers/numbers_test.iml" group="numbers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/peerspace/peerspace.iml" filepath="$PROJECT_DIR$/.idea/modules/peerspace/peerspace.iml" group="peerspace" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/peerspace/peerspace_main.iml" filepath="$PROJECT_DIR$/.idea/modules/peerspace/peerspace_main.iml" group="peerspace" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/peerspace/peerspace_test.iml" filepath="$PROJECT_DIR$/.idea/modules/peerspace/peerspace_test.iml" group="peerspace" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sim/sim.iml" filepath="$PROJECT_DIR$/.idea/modules/sim/sim.iml" group="sim" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sim/sim_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sim/sim_main.iml" group="sim" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sim/sim_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sim/sim_test.iml" group="sim" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/straightway.iml" filepath="$PROJECT_DIR$/.idea/modules/straightway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/straightway_main.iml" filepath="$PROJECT_DIR$/.idea/modules/straightway_main.iml" group="straightway" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/straightway_test.iml" filepath="$PROJECT_DIR$/.idea/modules/straightway_test.iml" group="straightway" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testing/testing.iml" filepath="$PROJECT_DIR$/.idea/modules/testing/testing.iml" group="testing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testing/testing_main.iml" filepath="$PROJECT_DIR$/.idea/modules/testing/testing_main.iml" group="testing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testing/testing_test.iml" filepath="$PROJECT_DIR$/.idea/modules/testing/testing_test.iml" group="testing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/units/units.iml" filepath="$PROJECT_DIR$/.idea/modules/units/units.iml" group="units" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/units/units_main.iml" filepath="$PROJECT_DIR$/.idea/modules/units/units_main.iml" group="units" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/units/units_test.iml" filepath="$PROJECT_DIR$/.idea/modules/units/units_test.iml" group="units" />
+    </modules>
+  </component>
+</project>

@@ -1,3 +1,4 @@
+rootProject.name = 'straightway'
 include 'error'
 include 'expr'
 include 'numbers'
