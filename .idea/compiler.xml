@@ -2,16 +2,38 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="data_main" target="1.8" />
+      <module name="data_test" target="1.8" />
       <module name="error_main" target="1.8" />
       <module name="error_test" target="1.8" />
       <module name="expr_main" target="1.8" />
       <module name="expr_test" target="1.8" />
+      <module name="integrationtest_main" target="1.8" />
+      <module name="integrationtest_test" target="1.8" />
+      <module name="main_main" target="1.8" />
+      <module name="main_test" target="1.8" />
+      <module name="net_main" target="1.8" />
+      <module name="net_test" target="1.8" />
+      <module name="networksimulator_main" target="1.8" />
+      <module name="networksimulator_test" target="1.8" />
       <module name="numbers_main" target="1.8" />
       <module name="numbers_test" target="1.8" />
+      <module name="peerspace-net_main" target="1.8" />
+      <module name="peerspace-net_test" target="1.8" />
       <module name="peerspace_main" target="1.8" />
       <module name="peerspace_test" target="1.8" />
+      <module name="Projects-units_main" target="1.8" />
+      <module name="Projects-units_test" target="1.8" />
+      <module name="samples_main" target="1.8" />
+      <module name="samples_test" target="1.8" />
+      <module name="sim-net_main" target="1.8" />
+      <module name="sim-net_test" target="1.8" />
+      <module name="sim.net_main" target="1.8" />
+      <module name="sim.net_test" target="1.8" />
       <module name="sim_main" target="1.8" />
       <module name="sim_test" target="1.8" />
+      <module name="straightway-sim_main" target="1.8" />
+      <module name="straightway-sim_test" target="1.8" />
       <module name="straightway_main" target="1.8" />
       <module name="straightway_test" target="1.8" />
       <module name="testing_main" target="1.8" />
@@ -19,6 +41,8 @@
       <module name="units-units_main" target="1.8" />
       <module name="units-units_test" target="1.8" />
       <module name="units_main" target="1.8" />
+      <module name="units_samples_main" target="1.8" />
+      <module name="units_samples_test" target="1.8" />
       <module name="units_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -29,7 +29,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../peerspace/src/main">
       <sourceFolder url="file://$MODULE_DIR$/../../../peerspace/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../peerspace/net/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../peerspace/src/main/kotlin" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../peerspace/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
