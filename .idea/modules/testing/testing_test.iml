@@ -35,9 +35,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="testing_main" />
+    <orderEntry type="module" module-name="numbers_main" />
     <orderEntry type="library" name="Gradle: straightway:dsl:0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: straightway:numbers:0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: straightway:error:0.1-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="error_main" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.20" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.2.20" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.0.0-M4" level="project" />

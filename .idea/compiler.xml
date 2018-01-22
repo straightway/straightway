@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="buildHelpers_main" target="1.8" />
+      <module name="buildHelpers_test" target="1.8" />
       <module name="data_main" target="1.8" />
       <module name="data_test" target="1.8" />
       <module name="error_main" target="1.8" />

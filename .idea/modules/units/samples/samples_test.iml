@@ -35,10 +35,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="samples_main" />
-    <orderEntry type="library" name="Gradle: straightway:units:0.2" level="project" />
+    <orderEntry type="module" module-name="units_main" />
     <orderEntry type="library" name="Gradle: straightway:dsl:0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: straightway:numbers:0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: straightway:error:0.1-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="numbers_main" />
+    <orderEntry type="module" module-name="error_main" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.20" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.20" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.20" level="project" />
