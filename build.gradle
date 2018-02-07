@@ -124,6 +124,7 @@ apply from: 'projectSpecific.gradle'
 uploadArchives {
     repositories {
         mavenDeployer {
+            pom.artifactId = project.path.substring(1).replaceAll(':', '-')
             repository(url: "file://" + file(findParentPath("repo")))
         }
     }
