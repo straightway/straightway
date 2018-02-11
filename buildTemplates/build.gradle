@@ -21,12 +21,14 @@ buildscript {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
+        jcenter()
     }
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.1'
         classpath 'gradle.plugin.org.jmailen.gradle:kotlinter-gradle:1.7.0'
+        classpath "gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.0+"
     }
 }
 
@@ -38,8 +40,11 @@ apply plugin: 'maven'
 apply plugin: 'idea'
 apply plugin: 'org.junit.platform.gradle.plugin'
 apply plugin: 'org.jmailen.kotlinter'
+apply plugin: "io.gitlab.arturbosch.detekt"
 
-tasks.idea.dependsOn(cleanIdea)
+tasks.idea.dependsOn cleanIdea
+//noinspection GroovyAssignabilityCheck
+check.dependsOn detektCheck
 
 if (idea.project != null) {
     idea.project.ipr {
@@ -140,7 +145,14 @@ junitPlatform {
 }
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.allWarningsAsErrors = true
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.allWarningsAsErrors = true
+}
+detekt {
+    profile("main") {
+        config = "$project.projectDir/detekt-config.yml"
+    }
 }
