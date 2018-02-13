@@ -15,6 +15,8 @@ test-pattern: # Configure exclusions for test sources
     # - 'LateinitUsage'
     # - 'SpreadOperator'
     - 'TooManyFunctions'
+    - 'LargeClass'
+    - 'LongMethod'
 
 build:
   warningThreshold: 1
@@ -83,10 +85,10 @@ complexity:
     active: false
   LargeClass:
     active: true
-    threshold: 150
+    threshold: 50
   LongMethod:
     active: true
-    threshold: 20
+    threshold: 4
   LongParameterList:
     active: true
     threshold: 5
