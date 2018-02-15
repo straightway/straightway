@@ -54,12 +54,17 @@ if (idea.project != null) {
                                                                          enabled           : 'true',
                                                                          level             : 'WEAK WARNING',
                                                                          enabled_by_default: 'true'])
-            classInspection.appendNode('option', [name: 'namePattern', value: '[A-Z][_A-Za-z\\d]*'])
+            classInspection.appendNode('option', [name: 'namePattern', value: '[A-Z][_ A-Za-z\\d]*'])
             def funInspection = profile.appendNode('inspection_tool', [class             : 'FunctionName',
                                                                        enabled           : 'true',
                                                                        level             : 'WEAK WARNING',
                                                                        enabled_by_default: 'true'])
             funInspection.appendNode('option', [name: 'namePattern', value: '[a-z][_A-Za-z\\d]*'])
+            def testFunInspection = profile.appendNode('inspection_tool', [class             : 'TestFunctionName',
+                                                                           enabled           : 'true',
+                                                                           level             : 'WEAK WARNING',
+                                                                           enabled_by_default: 'true'])
+            testFunInspection.appendNode('option', [name: 'namePattern', value: '.*'])
 
             def copyrightManager = provider.asNode().appendNode('component', [name: 'CopyrightManager', default: ''])
             def copyright = copyrightManager.appendNode('copyright')
@@ -79,16 +84,21 @@ repositories {
     maven { url "https://straightway.github.io/repo" }
 }
 
-static def junit5(part) { return "org.junit.jupiter:junit-jupiter-${part}:5.0.1" }
+static def junit5(part) { return "org.junit.jupiter:junit-jupiter-${part}:5.0.1".toString() }
+
 @SuppressWarnings("GrMethodMayBeStatic")
-def kotlin(part) { return "org.jetbrains.kotlin:kotlin-${part}:$kotlin_version" }
+def kotlin(part) { return "org.jetbrains.kotlin:kotlin-${part}:$kotlin_version".toString() }
+
 static def mockito() { return "org.mockito:mockito-core:1.+" }
+
 static def mockitoKotlin() { return 'com.nhaarman:mockito-kotlin:1.5.0' }
+
 def straightway(lib) {
-    return findProject(":${lib}") ?: "straightway:${lib.replaceAll(':', '-')}:${version}"
+    return findProject(":${lib}") ?: "straightway:${lib.replaceAll(':', '-')}:${version}".toString()
 }
+
 def straightway(lib, version) {
-    return findProject(":${lib}") ?: "straightway:${lib.replaceAll(':', '-')}:${version}"
+    return findProject(":${lib}") ?: "straightway:${lib.replaceAll(':', '-')}:${version}".toString()
 }
 
 dependencies {
@@ -105,7 +115,7 @@ dependencies {
 def findParentPath(String dirToFind) {
     def pathToCheck = project.projectDir
     while (pathToCheck != '/') {
-        def buildTemplatesDirToCheck = "${pathToCheck}/${dirToFind}"
+        def buildTemplatesDirToCheck = "${pathToCheck}/${dirToFind}".toString()
         if (new File(buildTemplatesDirToCheck).isDirectory()) {
             return buildTemplatesDirToCheck
         }
@@ -114,13 +124,13 @@ def findParentPath(String dirToFind) {
     return null
 }
 
-task refreshBuild {
+task refreshBuild(group: 'build setup') {
     doLast {
         def buildTemplatesDir = findParentPath("buildTemplates")
         new File(buildTemplatesDir).eachFile {
             def fileToRefresh = new File("${project.projectDir}/${it.name}")
             if (fileToRefresh.exists()) {
-                def srcFile = "${buildTemplatesDir}/${it.name}"
+                def srcFile = "${buildTemplatesDir}/${it.name}".toString()
                 copy {
                     from srcFile
                     into project.projectDir
@@ -141,6 +151,10 @@ uploadArchives {
     }
 }
 
+kotlinter {
+    indentSize = 0
+    //continuationIndentSize = 4
+}
 junitPlatform {
     filters {
         includeClassNamePattern '.*Test.*'
