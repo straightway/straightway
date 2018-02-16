@@ -16,6 +16,7 @@
 
 buildscript {
     ext.kotlin_version = '1.2.21'
+    ext.uploadToRepository = false
     repositories {
         mavenCentral()
         maven {
@@ -142,11 +143,13 @@ task refreshBuild(group: 'build setup') {
 
 apply from: 'projectSpecific.gradle'
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            pom.artifactId = project.path.substring(1).replaceAll(':', '-')
-            repository(url: "file://" + file(findParentPath("repo")))
+if (ext.uploadToRepository) {
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                pom.artifactId = project.path.substring(1).replaceAll(':', '-')
+                repository(url: "file://" + file(findParentPath("repo")))
+            }
         }
     }
 }
