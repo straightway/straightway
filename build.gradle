@@ -41,7 +41,8 @@ apply plugin: 'maven'
 apply plugin: 'idea'
 apply plugin: 'org.junit.platform.gradle.plugin'
 apply plugin: 'org.jmailen.kotlinter'
-apply plugin: "io.gitlab.arturbosch.detekt"
+apply plugin: 'io.gitlab.arturbosch.detekt'
+apply plugin: 'jacoco'
 
 tasks.idea.dependsOn cleanIdea
 
@@ -156,6 +157,22 @@ if (ext.uploadToRepository) {
 
 kotlinter {
     indentSize = 0
+}
+jacoco {
+    toolVersion = "0.8.0"
+    applyTo junitPlatformTest
+}
+jacocoTestReport {
+    afterEvaluate {
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ['**/Main*'])
+        })
+    }
+}
+junitPlatformTest {
+    jacoco {
+        destinationFile = file("${buildDir}/jacoco/test.exec")
+    }
 }
 junitPlatform {
     filters {
