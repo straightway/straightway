@@ -45,6 +45,8 @@ apply plugin: 'io.gitlab.arturbosch.detekt'
 apply plugin: 'jacoco'
 
 tasks.idea.dependsOn cleanIdea
+check.dependsOn jacocoTestCoverageVerification
+jacocoTestCoverageVerification.dependsOn test
 
 if (idea.project != null) {
     idea.project.ipr {
@@ -167,6 +169,18 @@ jacocoTestReport {
         classDirectories = files(classDirectories.files.collect {
             fileTree(dir: it, exclude: ['**/Main*'])
         })
+    }
+}
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            element = 'SOURCEFILE'
+            excludes = ['**/Main*.kt', '**/*Samples.kt']
+            limit {
+                counter = 'LINE'
+                minimum = 0.70
+            }
+        }
     }
 }
 junitPlatformTest {
