@@ -204,5 +204,6 @@ compileTestKotlin {
 detekt {
     profile("main") {
         config = "$project.projectDir/detekt-config.yml"
+        filters = ".*/out/.*"
     }
 }
