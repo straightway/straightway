@@ -5,7 +5,7 @@ test-pattern: # Configure exclusions for test sources
   active: true
   patterns: # Test file regexes
     - '.*/test/.*'
-    - '.*Test.kt'
+    - '.*Tests?.kt'
     - '.*Spec.kt'
     - '.*Sample.*\.kt'
   exclude-rule-sets:
@@ -22,6 +22,7 @@ test-pattern: # Configure exclusions for test sources
     - 'ThrowingExceptionInMain'
     - 'UnsafeCast'
     - 'UnsafeCallOnNullableType'
+    - 'TooManyFunctions'
 
 build:
   warningThreshold: 1
@@ -78,14 +79,14 @@ complexity:
   active: true
   ComplexCondition:
     active: true
-    threshold: 3
+    threshold: 4
   ComplexInterface:
     active: true
-    threshold: 6
+    threshold: 5
     includeStaticDeclarations: false
   ComplexMethod:
     active: true
-    threshold: 5
+    threshold: 6
   LabeledExpression:
     active: false
   LargeClass:
@@ -93,17 +94,17 @@ complexity:
     threshold: 50
   LongMethod:
     active: true
-    threshold: 4
+    threshold: 5
   LongParameterList:
     active: true
-    threshold: 2
+    threshold: 3
     ignoreDefaultParameters: false
   MethodOverloading:
     active: false
     threshold: 5
   NestedBlockDepth:
     active: true
-    threshold: 2
+    threshold: 3
   StringLiteralDuplication:
     active: false
     threshold: 2
