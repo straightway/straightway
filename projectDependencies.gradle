@@ -20,4 +20,5 @@ apply from: 'peerspace/projectDependencies.gradle'
 apply from: 'sim/projectDependencies.gradle'
 apply from: 'testing/projectDependencies.gradle'
 apply from: 'units/projectDependencies.gradle'
+apply from: 'utils/projectDependencies.gradle'
 
