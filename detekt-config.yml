@@ -23,10 +23,12 @@ test-pattern: # Configure exclusions for test sources
     - 'UnsafeCast'
     - 'UnsafeCallOnNullableType'
     - 'TooManyFunctions'
+    - 'EmptyCatchBlock'
 
 build:
-  warningThreshold: 1
-  failThreshold: 1
+  #warningThreshold: 1
+  #failThreshold: 1
+  maxIssues: 0
   weights:
     complexity: 2
     formatting: 1
@@ -216,7 +218,7 @@ naming:
     minimumFunctionNameLength: 3
   FunctionNaming:
     active: true
-    functionPattern: '^([a-z$][a-zA-Z$0-9]*)|(`.*`)$'
+    functionPattern: '^([a-z$][a-zA-Z$0-9]*_?)|(`.*`)$'
   MatchingDeclarationName:
     active: true
   MemberNameEqualsClassName:
