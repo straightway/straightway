@@ -70,7 +70,12 @@ if (idea.project != null) {
                                                                            enabled_by_default: 'true'])
             testFunInspection.appendNode('option', [name: 'namePattern', value: '.*'])
 
-            def copyrightManager = provider.asNode().appendNode('component', [name: 'CopyrightManager', default: ''])
+            profile.appendNode('inspection_tool', [class             : 'RemoveRedundantBackticks',
+                                                   enabled           : 'false',
+                                                   level             : 'WARNING',
+                                                   enabled_by_default: 'false'])
+
+            def copyrightManager = provider.asNode().appendNode('component', [name: 'CopyrightManager', default: 'Apache License'])
             def copyright = copyrightManager.appendNode('copyright')
             copyright.appendNode('option', [name: 'myName', value: 'Apache License'])
             copyright.appendNode('option', [name: 'notice', value: 'Copyright 2016 github.com/straightway\n\n Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an &quot;AS IS&quot; BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.'])
