@@ -22,3 +22,6 @@
 [submodule "units"]
 	path = units
 	url = https://github.com/straightway/units
+[submodule "utils"]
+	path = utils
+	url = https://github.com/straightway/utils.git
