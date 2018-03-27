@@ -26,8 +26,6 @@ test-pattern: # Configure exclusions for test sources
     - 'EmptyCatchBlock'
 
 build:
-  #warningThreshold: 1
-  #failThreshold: 1
   maxIssues: 0
   weights:
     complexity: 2
