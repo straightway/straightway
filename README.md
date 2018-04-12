@@ -7,7 +7,9 @@ Top level repository for all straightway projects:
 * [testing](https://github.com/straightway/testing): Kotlin library to ease unit testing with JUnit 5.
 * [numbers](https://github.com/straightway/numbers): Kotlin library for math calculations with mixed number types
 * [units](https://github.com/straightway/units): Kotlin library for attaching units to numbers and converting them.
+* [random](https://github.com/straightway/random): Kotlin library for random numbers.
 * [expr](https://github.com/straightway/expr): Kotlin library for partially bound functional expressions.
+* [utils](https://github.com/straightway/utils): Kotlin library with general utility classes and functions.
 * [error](https://github.com/straightway/error): Kotlin error utility library.
 
 All projects have in common:
