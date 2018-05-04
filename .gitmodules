@@ -13,6 +13,9 @@
 [submodule "repo"]
 	path = repo
 	url = https://github.com/straightway/repo
+[submodule "random"]
+	path = random
+	url = https://github.com/straightway/random
 [submodule "sim"]
 	path = sim
 	url = https://github.com/straightway/sim
