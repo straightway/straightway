@@ -91,6 +91,7 @@ if (project.name == project(":").name) {
 repositories {
     mavenCentral()
     maven { url "https://straightway.github.io/repo" }
+    jcenter()
 }
 
 static def junit5(part) { return "org.junit.jupiter:junit-jupiter-${part}:5.0.1".toString() }
@@ -101,6 +102,8 @@ def kotlin(part) { return "org.jetbrains.kotlin:kotlin-${part}:$kotlin_version".
 static def mockito() { return "org.mockito:mockito-core:1.+" }
 
 static def mockitoKotlin() { return 'com.nhaarman:mockito-kotlin:1.5.0' }
+
+static def koin() { return 'org.koin:koin-core:0.9.3' }
 
 def straightway(lib) {
     return findProject(":${lib}") ?: "straightway:${lib.replaceAll(':', '-')}:${version}".toString()
@@ -180,7 +183,7 @@ jacocoTestCoverageVerification {
     violationRules {
         rule {
             element = 'SOURCEFILE'
-            excludes = ['**/Main*.kt', '**/*Samples.kt', '**/*_NOCOVERAGE.kt']
+            excludes = ['**/Main*.kt', '**/*Samples.kt', '**/*_NOCOVERAGE.kt', '**/KoinContext.kt']
             limit {
                 counter = 'LINE'
                 minimum = 0.70
