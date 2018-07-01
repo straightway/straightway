@@ -22,4 +22,5 @@ apply from: 'random/projectDependencies.gradle'
 apply from: 'testing/projectDependencies.gradle'
 apply from: 'units/projectDependencies.gradle'
 apply from: 'utils/projectDependencies.gradle'
+apply from: 'koinutils/projectDependencies.gradle'
 
