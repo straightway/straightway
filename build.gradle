@@ -154,12 +154,13 @@ task refreshBuild(group: 'build setup') {
 
 apply from: 'projectSpecific.gradle'
 
-if (ext.uploadToRepository) {
+def repoPath = findParentPath("repo")
+if ((repoPath != null) && ext.uploadToRepository) {
     uploadArchives {
         repositories {
             mavenDeployer {
                 pom.artifactId = project.path.substring(1).replaceAll(':', '-')
-                repository(url: "file://" + file(findParentPath("repo")))
+                repository(url: "file://" + file(repoPath))
             }
         }
     }
