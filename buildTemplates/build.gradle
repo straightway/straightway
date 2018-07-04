@@ -94,7 +94,7 @@ repositories {
     jcenter()
 }
 
-static def junit5(part) { return "org.junit.jupiter:junit-jupiter-${part}:5.0.1".toString() }
+static def junit5(part) { return "org.junit.jupiter:junit-jupiter-${part}:5.2.0".toString() }
 
 @SuppressWarnings("GrMethodMayBeStatic")
 def kotlin(part) { return "org.jetbrains.kotlin:kotlin-${part}:$kotlin_version".toString() }
