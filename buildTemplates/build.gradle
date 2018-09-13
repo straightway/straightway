@@ -28,7 +28,7 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'gradle.plugin.org.jmailen.gradle:kotlinter-gradle:1.7.0'
-        classpath 'gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.0.RC6'
+        classpath 'gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.+'
     }
 }
 
@@ -99,9 +99,9 @@ def kotlin(part) { return "org.jetbrains.kotlin:kotlin-${part}:$kotlin_version".
 
 static def mockito() { return "org.mockito:mockito-core:2.+" }
 
-static def mockitoKotlin() { return 'com.nhaarman:mockito-kotlin:1.6.0' }
+static def mockitoKotlin() { return 'com.nhaarman:mockito-kotlin:1.+' }
 
-static def koin() { return 'org.koin:koin-core:0.9.+' }
+static def koin() { return 'org.koin:koin-core:0.+' }
 
 def straightway(lib) {
     return findProject(":${lib}") ?: "straightway:${lib.replaceAll(':', '-')}:${version}".toString()
@@ -166,7 +166,7 @@ kotlinter {
     indentSize = 0
 }
 jacoco {
-    toolVersion = "0.8.1"
+    toolVersion = "0.+"
 }
 jacocoTestReport {
     afterEvaluate {
