@@ -99,9 +99,9 @@ static def junit5(part) { return "org.junit.jupiter:junit-jupiter-${part}:5.3.1"
 @SuppressWarnings("GrMethodMayBeStatic")
 def kotlin(part) { return "org.jetbrains.kotlin:kotlin-${part}:$kotlin_version".toString() }
 
-static def mockito() { return "org.mockito:mockito-core:1.+" }
+static def mockito() { return "org.mockito:mockito-core:2.+" }
 
-static def mockitoKotlin() { return 'com.nhaarman:mockito-kotlin:1.5.0' }
+static def mockitoKotlin() { return 'com.nhaarman:mockito-kotlin:1.6.0' }
 
 static def koin() { return 'org.koin:koin-core:0.9.3' }
 
