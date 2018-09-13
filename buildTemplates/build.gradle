@@ -94,7 +94,7 @@ repositories {
     jcenter()
 }
 
-static def junit5(part) { return "org.junit.jupiter:junit-jupiter-${part}:5.2.0".toString() }
+static def junit5(part) { return "org.junit.jupiter:junit-jupiter-${part}:5.3.1".toString() }
 
 @SuppressWarnings("GrMethodMayBeStatic")
 def kotlin(part) { return "org.jetbrains.kotlin:kotlin-${part}:$kotlin_version".toString() }
@@ -118,9 +118,9 @@ dependencies {
     testCompile junit5("api")
     testRuntime(
             junit5("engine"),
-            'org.junit.vintage:junit-vintage-engine:4.12.1',
-            'org.junit.platform:junit-platform-launcher:1.0.1',
-            'org.junit.platform:junit-platform-runner:1.0.1'
+            'org.junit.vintage:junit-vintage-engine:5.3.1',
+            'org.junit.platform:junit-platform-launcher:1.3.1',
+            'org.junit.platform:junit-platform-runner:1.3.1'
     )
 }
 
