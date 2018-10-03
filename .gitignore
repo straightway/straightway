@@ -39,3 +39,6 @@ fabric.properties
 
 # Libraries
 lib/**/*.jar
+
+# Debugger attaches
+.attach_pid*
