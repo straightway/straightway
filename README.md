@@ -9,6 +9,7 @@ Top level repository for all straightway projects:
 * [units](https://github.com/straightway/units): Kotlin library for attaching units to numbers and converting them.
 * [random](https://github.com/straightway/random): Kotlin library for random numbers.
 * [expr](https://github.com/straightway/expr): Kotlin library for partially bound functional expressions.
+* [koinutils](https://github.com/straightway/koinutils): Utlitities for the Koin dependency injection framework in kotlin.
 * [utils](https://github.com/straightway/utils): Kotlin library with general utility classes and functions.
 * [error](https://github.com/straightway/error): Kotlin error utility library.
 
