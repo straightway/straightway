@@ -3,9 +3,9 @@
 Straightway is a network storage and communication framework. It is planned to have various
 applications, ranging from messaging and social media to equal and secret ballot. These
 applications shall use the network storage layer
-[peerspace]((https://github.com/straightway/peerspace)) as a basis.
+[peerspace](https://github.com/straightway/peerspace) as a basis.
 
-Currently, [peerspace]((https://github.com/straightway/peerspace)) is under development, the
+Currently, [peerspace](https://github.com/straightway/peerspace) is under development, the
 applications mentioned above are in a very early conceptual phase.
 
 # HELP WANTED!
