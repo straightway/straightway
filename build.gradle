@@ -31,8 +31,8 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         //classpath 'gradle.plugin.org.jmailen.gradle:kotlinter-gradle:1.+'
-        classpath 'gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.0.RC8'
-    }
+        classpath 'io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.1'
+   }
 }
 
 group 'straightway'
@@ -84,10 +84,10 @@ if (idea.project != null) {
     }
 }
 
-if (project.name == project(":").name) {
+//if (project.name == project(":").name) {
     //noinspection GroovyAssignabilityCheck
-    check.dependsOn detektCheck
-}
+    //check.dependsOn detekt
+//}
 
 repositories {
     mavenCentral()
@@ -208,8 +208,6 @@ compileTestKotlin {
     }
 }
 detekt {
-    profile("main") {
-        config = "$project.projectDir/detekt-config.yml"
-        filters = ".*/out/.*"
-    }
+    config = files("$project.projectDir/detekt-config.yml".toString())
+    filters = ".*/out/.*"
 }

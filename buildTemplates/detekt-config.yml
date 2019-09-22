@@ -14,7 +14,6 @@ test-pattern: # Configure exclusions for test sources
     - 'MagicNumber'
     # - 'LateinitUsage'
     # - 'SpreadOperator'
-    - 'TooManyFunctions'
     - 'LargeClass'
     - 'LongMethod'
     - 'TooGenericExceptionCaught'
@@ -112,11 +111,11 @@ complexity:
     ignoreStringsRegex: '$^'
   TooManyFunctions:
     active: true
-    thresholdInFiles: 15
-    thresholdInClasses: 15
+    thresholdInFiles: 50
+    thresholdInClasses: 50
     thresholdInInterfaces: 5
-    thresholdInObjects: 15
-    thresholdInEnums: 15
+    thresholdInObjects: 50
+    thresholdInEnums: 50
 
 empty-blocks:
   active: true
@@ -135,7 +134,7 @@ empty-blocks:
   EmptyForBlock:
     active: true
   EmptyFunctionBlock:
-    active: true
+    active: false
   EmptyIfBlock:
     active: true
   EmptyInitBlock:
@@ -343,7 +342,7 @@ style:
   RedundantVisibilityModifierRule:
     active: true
   ReturnCount:
-    active: true
+    active: false
     max: 2
     excludedFunctions: "equals"
   SafeCast:
